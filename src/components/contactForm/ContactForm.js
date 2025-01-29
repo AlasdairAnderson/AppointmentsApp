@@ -11,11 +11,11 @@ export const ContactForm = ({
 }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <label for="contact-form-name">Name</label>
+      <label htmlFor="contact-form-name">Name</label>
       <input id="contact-form-name" type="text" onChange={ (e) => setName(e.target.value)} value={name}/>
-      <label for="contact-form-phone">Phone Number (12345-678-910)</label>
+      <label htmlFor="contact-form-phone">Phone Number (12345-678-910)</label>
       <input id="contact-form-phone" type="tel" pattern="[0-9]{5}-[0-9]{3}-[0-9]{3}" onChange={ (e) => setPhone(e.target.value)} value={phone}/>
-      <label for="contact-form-email">Email</label>
+      <label htmlFor="contact-form-email">Email</label>
       <input id="contact-form-email" type="email" patter=".+@example\.com" size="30" onChange={ (e) => setEmail(e.target.value)} value={email}/>
       <button type="submit">Submit</button>
     </form>
