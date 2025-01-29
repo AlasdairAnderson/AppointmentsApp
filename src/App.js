@@ -24,12 +24,12 @@ function App() {
     setContacts((prev) => [...prev, newContact]);
   }
 
-  const addAppointment = (event) => {
+  const addAppointment = (name, contact, date, time) => {
     const newAppointment = {
-      name: event.target.name,
-      contact: event.target.contact,
-      date: event.target.date,
-      time: event.target.time
+      name: name,
+      contact: contact,
+      date: date,
+      time: time
     }
     setAppointments((prev) => [...prev, newAppointment]);
   }
