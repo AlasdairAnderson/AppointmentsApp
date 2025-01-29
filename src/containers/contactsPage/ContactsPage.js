@@ -10,6 +10,7 @@ export const ContactsPage = (props) => {
   */
   const contacts = props.contacts;
   const addContact = props.addContact;
+  console.log(contacts);
   
   // Track contact info of form values
   const [ name, setName ] = useState('');
@@ -23,9 +24,11 @@ export const ContactsPage = (props) => {
     Add contact info and clear data
     if the contact name is not a duplicate
     */
-    if(duplicateName){
+    if(!duplicateName){
       addContact(name, phone, email);
-      document.getElementById("contact-form").reset(); 
+      setName('');
+      setPhone('');
+      setEmail('');
     } else {
       alert('Name is already registered as a contact please choose another');
     }
@@ -36,10 +39,14 @@ export const ContactsPage = (props) => {
   contacts array variable in props
   */
   useEffect(() => {
-    if(contacts.include(name)){
+    if(contacts.find( (contact) => contact.name === name)){
       setDuplicateName(true);
+      console.log(duplicateName);
+      console.log(name);
     } else {
       setDuplicateName(false);
+      console.log(duplicateName);
+      console.log(name);
     }
   }, [name])
 
