@@ -10,7 +10,6 @@ export const ContactsPage = (props) => {
   */
   const contacts = props.contacts;
   const addContact = props.addContact;
-  console.log(contacts);
   
   // Track contact info of form values
   const [ name, setName ] = useState('');
@@ -41,12 +40,8 @@ export const ContactsPage = (props) => {
   useEffect(() => {
     if(contacts.find( (contact) => contact.name === name)){
       setDuplicateName(true);
-      console.log(duplicateName);
-      console.log(name);
     } else {
       setDuplicateName(false);
-      console.log(duplicateName);
-      console.log(name);
     }
   }, [name])
 
@@ -59,7 +54,7 @@ export const ContactsPage = (props) => {
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList contacts={contacts}/>
+        <TileList list={contacts}/>
       </section>
     </div>
   );
