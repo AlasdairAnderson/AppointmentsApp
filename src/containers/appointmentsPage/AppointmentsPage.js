@@ -18,14 +18,7 @@ export const AppointmentsPage = (props) => {
     /*
     Add contact info and clear data  
     */
-    const newAppointment = {
-      name: name,
-      contact: contact,
-      date: date,
-      time: time
-    }
-    props.addAppointment((prev) => [...prev, newAppointment]);
-
+    props.addAppointment(name,contact,date,time)
     //Clear Form
     setName('');
     setContact('');
@@ -37,7 +30,7 @@ export const AppointmentsPage = (props) => {
     <div>
       <section>
         <h2>Add Appointment</h2>
-        <AppointmentForm name={name} setName={setName} contact={contact} setContact={setContact} date={date} setDate={setDate} time={time} setTime={setTime} handleSubmit={handleSubmit} />
+        <AppointmentForm name={name} setName={setName} contact={contact} setContact={setContact} date={date} setDate={setDate} time={time} setTime={setTime} handleSubmit={handleSubmit} contacts={props.contacts}/>
       </section>
       <hr />
       <section>
