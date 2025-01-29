@@ -15,11 +15,11 @@ function App() {
   Implement functions to add data to
   contacts and appointments
   */
-  const addContact = (event) => {
+  const addContact = (name, phone, email) => {
     const newContact = {
-      name: event.target.name,
-      phone: event.target.phone,
-      email: event.target.email
+      name: name,
+      phone: phone,
+      email: email
     }
     setContacts((prev) => [...prev, newContact]);
   }
