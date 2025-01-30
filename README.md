@@ -9,7 +9,7 @@ This React application manages contacts and appointments through two primary pag
 
 The project is built using functional React components and utilizes hooks for state management. It was developed using the initial codebase provided by Codecademy.
 
-View deployed site here <link>https://appointmentmanagementapp.netlify.app/contacts</link>
+View deployed site here <link>https://appointmentmanagementapp.netlify.app</link>
 
 ---
 
