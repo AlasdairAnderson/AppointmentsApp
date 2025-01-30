@@ -1,3 +1,5 @@
+![image](https://github.com/user-attachments/assets/cfd9fdf9-98dd-45d6-b9a2-743cfc176063)
+
 # Contacts & Appointments Management App
 
 ## Project Overview
@@ -6,6 +8,8 @@ This React application manages contacts and appointments through two primary pag
 - **Appointments Page**: Enables users to schedule and view appointments.
 
 The project is built using functional React components and utilizes hooks for state management. It was developed using the initial codebase provided by Codecademy.
+
+View deployed site here <link>https://appointmentmanagementapp.netlify.app/contacts</link>
 
 ---
 
